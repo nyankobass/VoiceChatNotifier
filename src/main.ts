@@ -8,7 +8,7 @@ const lineNotify = new LineNotify(config.lineTolen);
 
 /** @note 入室後すぐに通知をすると部屋の出入りで凄まじい量の通知が発生しそうなので */
 /**       不感帯を設ける*/
-const NOTIFY_INTERVAL_MS = 2000;
+const NOTIFY_INTERVAL_MS = 10000;
 const timerIdMap = {};
 function onOpen(channel: VoiceChannel) {
     if (timerIdMap[channel.id] !=  null) {
